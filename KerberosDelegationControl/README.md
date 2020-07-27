@@ -17,6 +17,6 @@ Requirements:
 - Active directory powershell Module
 
 
-![Screenshoot of KerberosAuthenticationTester](https://github.com/pierrejeandev/KerberosTools/raw/master/KerberosAuthenticationTester/screenshoot1.png)
+![Screenshoot of KerberosAuthenticationTester](https://github.com/pierrejeandev/KerberosTools/raw/master/KerberosDelegationControl/screenshoot1.png)
 
 
