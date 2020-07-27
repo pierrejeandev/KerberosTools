@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!--Project was exported from assembly: P:\Software\Utils\KerberosAuthenticationTester.exe-->
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3A366134-FF4D-411A-98EF-C84B37A69886}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AssemblyName>KerberosAuthenticationTester</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <ApplicationVersion>1.0.0.0</ApplicationVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MB\WebAuthenticationTester\AuthorizationDetails.cs" />
+    <Compile Include="MB\WebAuthenticationTester\CredentialsControl.cs" />
+    <Compile Include="MB\WebAuthenticationTester\EventLogWriter.cs" />
+    <Compile Include="MB\WebAuthenticationTester\Form1.cs" />
+    <Compile Include="MB\WebAuthenticationTester\Program.cs" />
+    <Compile Include="MB\WebAuthenticationTester\WebTestRequest.cs" />
+    <Compile Include="MB\Authorization\AuthorizationMessage.cs" />
+    <Compile Include="MB\Authorization\AuthorizationMessageFactory.cs" />
+    <Compile Include="MB\Authorization\AuthorizationType.cs" />
+    <Compile Include="MB\Authorization\UnknownAuthorizationMessage.cs" />
+    <Compile Include="MB\Authorization\Basic\BasicAuthorizationMessage.cs" />
+    <Compile Include="MB\Authorization\Kerberos\APOptions.cs" />
+    <Compile Include="MB\Authorization\Kerberos\EncryptedData.cs" />
+    <Compile Include="MB\Authorization\Kerberos\EncryptionType.cs" />
+    <Compile Include="MB\Authorization\Kerberos\KerberosAuthorizeMessageBuilder.cs" />
+    <Compile Include="MB\Authorization\Kerberos\KrbApReq.cs" />
+    <Compile Include="MB\Authorization\Kerberos\InitialContextToken.cs" />
+    <Compile Include="MB\Authorization\Kerberos\KerberosAuthorizeMessage.cs" />
+    <Compile Include="MB\Authorization\Kerberos\MechType.cs" />
+    <Compile Include="MB\Authorization\Kerberos\MessageType.cs" />
+    <Compile Include="MB\Authorization\Kerberos\NegotiationToken.cs" />
+    <Compile Include="MB\Authorization\Kerberos\NegTokenInit.cs" />
+    <Compile Include="MB\Authorization\Kerberos\PrincipalName.cs" />
+    <Compile Include="MB\Authorization\Kerberos\PrincipalNameType.cs" />
+    <Compile Include="MB\Authorization\Kerberos\Ticket.cs" />
+    <Compile Include="MB\Authorization\Ntlm\AvPairs.cs" />
+    <Compile Include="MB\Authorization\Ntlm\AvType.cs" />
+    <Compile Include="MB\Authorization\Ntlm\NegotiateFlags.cs" />
+    <Compile Include="MB\Authorization\Ntlm\NtlmResponse.cs" />
+    <Compile Include="MB\Authorization\Ntlm\NtlmAuthorizeMessage.cs" />
+    <Compile Include="MB\Authorization\Ntlm\NtlmResponseFactory.cs" />
+    <Compile Include="MB\Authorization\Ntlm\NtlmV1Response.cs" />
+    <Compile Include="MB\Authorization\Ntlm\NtlmV2ClientChallenge.cs" />
+    <Compile Include="MB\Authorization\Ntlm\NtlmV2Response.cs" />
+    <Compile Include="MB\Authorization\Ntlm\RestrictionEncoding.cs" />
+    <Compile Include="MB\Authorization\Ntlm\Version.cs" />
+    <Compile Include="MB\Utilities\Kerberos\Ticket.cs" />
+    <Compile Include="MB\Utilities\Kerberos\TicketsManager.cs" />
+    <Compile Include="MB\Utilities\Kerberos\TicketTreeNode.cs" />
+    <Compile Include="MB\Utilities\Win32\Helper.cs" />
+    <Compile Include="MB\Utilities\Win32\Lsa.cs" />
+    <Compile Include="MB\Utilities\Win32\UNICODE_STRING.cs" />
+    <Compile Include="MB\Utilities\Win32\KERB_QUERY_TKT_CACHE_RESPONSE.cs" />
+    <Compile Include="MB\Utilities\Win32\KERB_TICKET_CACHE_INFO.cs" />
+    <Compile Include="MB\Utilities\Win32\KERB_QUERY_TKT_CACHE_REQUEST.cs" />
+    <Compile Include="MB\Utilities\Win32\KERB_PURGE_TKT_CACHE_REQUEST.cs" />
+    <Compile Include="MB\Utilities\Win32\KERB_PROTOCOL_MESSAGE_TYPE.cs" />
+    <Compile Include="MB\Utilities\Win32\WinStatusCodes.cs" />
+    <Compile Include="MB\Utilities\Win32\LSA_STRING.cs" />
+    <Compile Include="MB\Utilities\Win32\LsaStringWrapper.cs" />
+    <Compile Include="MB\Properties\Resources.cs" />
+    <Compile Include="MB\Properties\Settings.cs" />
+    <Compile Include="LCLib\Asn1Processor\BinaryDump.cs" />
+    <Compile Include="LCLib\Asn1Processor\Asn1Util.cs" />
+    <Compile Include="LipingShare\LCLib\Asn1Processor\Asn1ClipboardData.cs" />
+    <Compile Include="LipingShare\LCLib\Asn1Processor\IAsn1Node.cs" />
+    <Compile Include="LipingShare\LCLib\Asn1Processor\Asn1Node.cs" />
+    <Compile Include="LipingShare\LCLib\Asn1Processor\Asn1Parser.cs" />
+    <Compile Include="LipingShare\LCLib\Asn1Processor\Asn1Tag.cs" />
+    <Compile Include="LipingShare\LCLib\Asn1Processor\Asn1TagClasses.cs" />
+    <Compile Include="LipingShare\LCLib\Asn1Processor\Asn1TreeNode.cs" />
+    <Compile Include="LipingShare\LCLib\Asn1Processor\Asn1Util.cs" />
+    <Compile Include="LipingShare\LCLib\Asn1Processor\BinaryView.cs" />
+    <Compile Include="LipingShare\LCLib\Asn1Processor\ByteLocation.cs" />
+    <Compile Include="LipingShare\LCLib\Asn1Processor\NamespaceDoc.cs" />
+    <Compile Include="LipingShare\LCLib\Asn1Processor\Oid.cs" />
+    <Compile Include="LipingShare\LCLib\Asn1Processor\RelativeOid.cs" />
+    <Compile Include="LipingShare\LCLib\Asn1Processor\VersionInfo.cs" />
+    <Compile Include="AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MB\Properties\Resources.resx" />
+    <EmbeddedResource Include="MB\WebAuthenticationTester\AuthorizationDetails.resx" />
+    <EmbeddedResource Include="MB\WebAuthenticationTester\CredentialsControl.resx" />
+    <EmbeddedResource Include="MB\WebAuthenticationTester\Form1.resx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
