@@ -24,3 +24,9 @@ Kerberos Authentication Tester Features:
 
 - Support for TLS 1.1 and 1.2
 - Detailed messages on exception
+
+# Screenshoot
+
+![Screenshoot of KerberosAuthenticationTester](https://github.com/pierrejeandev/KerberosTools/raw/master/KerberosAuthenticationTester/screenshoot1.png)
+
+
