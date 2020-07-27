@@ -78,9 +78,9 @@ namespace MB.Authorization.Ntlm
             }
             break;
           case AvType.MsvAvTimestamp:
-            byte[] Buffer = new byte[(int) uint16];
-            Buffer.BlockCopy((Array) this._buffer, this._index, (Array) Buffer, 0, (int) uint16);
-            this.MsAvRestrictions = new RestrictionEncoding(Buffer);
+            byte[] buffer = new byte[(int) uint16];
+            Buffer.BlockCopy((Array) this._buffer, this._index, (Array) buffer, 0, (int) uint16);
+            this.MsAvRestrictions = new RestrictionEncoding(buffer);
             break;
           case AvType.MsAvRestrictions:
             this.MsvAvTargetName = Encoding.Unicode.GetString(this._buffer, this._index, (int) uint16);

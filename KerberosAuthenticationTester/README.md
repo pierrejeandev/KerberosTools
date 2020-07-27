@@ -20,4 +20,7 @@ Kerberos Authentication Tester Features:
 - It has a detailed view with a complete breakdown of the Authorization header. (Yep, went through all the RFCs to dissect the Kerberos and NTLM packages)
 - It shows your current Kerberos tickets and allows you to remove them (like klist.exe)
 
+# Improvement from the 2009 version
 
+- Support for TLS 1.1 and 1.2
+- Detailed messages on exception

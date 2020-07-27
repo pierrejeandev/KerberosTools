@@ -79,9 +79,9 @@ namespace MB.Authorization.Ntlm
       int int32 = BitConverter.ToInt32(this._messageData, 24);
       if (int16 > (short) 0)
       {
-        byte[] Buffer = new byte[(int) int16];
-        Buffer.BlockCopy((Array) this._messageData, int32, (Array) Buffer, 0, (int) int16);
-        this.NtChallengeResponse = NtlmResponseFactory.CreateNtlmResponse(Buffer);
+        byte[] buffer = new byte[(int) int16];
+        Buffer.BlockCopy((Array) this._messageData, int32, (Array) buffer, 0, (int) int16);
+        this.NtChallengeResponse = NtlmResponseFactory.CreateNtlmResponse(buffer);
       }
       else
         this.NtChallengeResponse = (NtlmResponse) null;

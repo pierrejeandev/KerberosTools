@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <!--Project was exported from assembly: P:\Software\Utils\KerberosAuthenticationTester.exe-->
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -7,9 +7,15 @@
     <ProjectGuid>{3A366134-FF4D-411A-98EF-C84B37A69886}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AssemblyName>KerberosAuthenticationTester</AssemblyName>
-    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
     <ApplicationVersion>1.0.0.0</ApplicationVersion>
     <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -20,6 +26,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -29,6 +36,10 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>MB.WebAuthenticationTester.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -37,10 +48,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MB\WebAuthenticationTester\AuthorizationDetails.cs" />
-    <Compile Include="MB\WebAuthenticationTester\CredentialsControl.cs" />
+    <Compile Include="MB\WebAuthenticationTester\AuthorizationDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MB\WebAuthenticationTester\CredentialsControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="MB\WebAuthenticationTester\EventLogWriter.cs" />
-    <Compile Include="MB\WebAuthenticationTester\Form1.cs" />
+    <Compile Include="MB\WebAuthenticationTester\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MB\WebAuthenticationTester\Program.cs" />
     <Compile Include="MB\WebAuthenticationTester\WebTestRequest.cs" />
     <Compile Include="MB\Authorization\AuthorizationMessage.cs" />
@@ -112,6 +129,9 @@
     <EmbeddedResource Include="MB\WebAuthenticationTester\AuthorizationDetails.resx" />
     <EmbeddedResource Include="MB\WebAuthenticationTester\CredentialsControl.resx" />
     <EmbeddedResource Include="MB\WebAuthenticationTester\Form1.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

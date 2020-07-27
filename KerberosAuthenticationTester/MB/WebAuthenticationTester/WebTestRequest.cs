@@ -86,6 +86,13 @@ namespace MB.WebAuthenticationTester
       this.RequestDate = DateTime.Now;
       try
       {
+        ServicePointManager.SecurityProtocol =  (SecurityProtocolType)(
+          (int)SecurityProtocolType.Ssl3 
+          | 3072 // SecurityProtocolType.Tls12 
+          | 768 // SecurityProtocolType.Tls11 
+          | 192 // SecurityProtocolType.Tls;
+          );
+
         this.Request = WebRequest.Create(this.Url) as HttpWebRequest;
         this.Request.Credentials = this._requestCredentials;
         this.Request.CachePolicy = new RequestCachePolicy(RequestCacheLevel.NoCacheNoStore);
@@ -105,13 +112,13 @@ namespace MB.WebAuthenticationTester
         }
         else
         {
-          this.ErrorMessage = ex.Message;
+          this.ErrorMessage = ex.ToString();
           return false;
         }
       }
       catch (Exception ex)
       {
-        this.ErrorMessage = ex.Message;
+        this.ErrorMessage = ex.ToString();
         return false;
       }
       if (this.Response != null)
