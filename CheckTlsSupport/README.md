@@ -6,6 +6,8 @@ On older DotNet framework (before 4.0) TLS 1.1 and 1.2 can be supported but they
 
 This tool displays the Active TLS version and the effective version of DotNet.
 
+# Enable TLS 1.2 on DotNEt 2.0 & 3.x
+
 You can enable TLS 1.1 and 1.2 on older DotNet Framework with:
 
 ```C#
@@ -20,6 +22,16 @@ ServicePointManager.SecurityProtocol =  (SecurityProtocolType)(
 
 Note: SecurityProtocolType.Tls12 does not exists in DotNet 2.0 but still we can support TLS 1.2 on DotNet 2.0 application with this trick, if we are using a version of windows that support it (TLS is managed by Windows disrectly, not, by DotNet frameworks).
 As of 2020 all supported version of windows, include support for TLS 1.2. 
+
+# Screenshoot
+
+DotNet 2.0
+
+![Screenshoot of CheckTlsSupport in dotNet 4.0](https://github.com/pierrejeandev/KerberosTools/raw/master/CheckTlsSupport/screenshoot_DotNet2.png)
+
+DotNet 4.0
+
+![Screenshoot of CheckTlsSupport in dotNet 4.0](https://github.com/pierrejeandev/KerberosTools/raw/master/CheckTlsSupport/screenshoot_DotNet4.png)
 
 
 
