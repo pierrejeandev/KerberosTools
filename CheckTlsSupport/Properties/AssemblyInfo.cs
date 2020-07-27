@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("CheckTlsSupport")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("LOREAL")]
+[assembly: AssemblyCompany("pierrejeandev")]
 [assembly: AssemblyProduct("CheckTlsSupport")]
-[assembly: AssemblyCopyright("Copyright © LOREAL 2020")]
+[assembly: AssemblyCopyright("Copyright © pierrejeandev 2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

@@ -86,6 +86,7 @@ namespace MB.WebAuthenticationTester
       this.RequestDate = DateTime.Now;
       try
       {
+        // We use ids here instead of SecurityProtocolType enum to support build on old DotNet version where SecurityProtocolType.Tls12 does not exists 
         ServicePointManager.SecurityProtocol =  (SecurityProtocolType)(
           (int)SecurityProtocolType.Ssl3 
           | 3072 // SecurityProtocolType.Tls12 
